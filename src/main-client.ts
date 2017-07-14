@@ -18,7 +18,8 @@ xhr.open('GET', 'dist/ipsum-output.json');
 xhr.send();
 
 /* tslint:disable no-string-literal */
-theForm.addEventListener('submit', () => {
+theForm.addEventListener('submit', (e: Event) => {
+  e.preventDefault();
   if(loading) {
     alert('Loading dictionary.  Please try again.');
     return false;
