@@ -1,0 +1,27 @@
+{
+  "name": "fm-ipsum",
+  "version": "1.0.0",
+  "description": "A generator of ipsum generators",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -fR lib/*",
+    "start": "node lib/index.js",
+    "build": "tslint -c tslint.json 'src/**/*.ts' && tsc && browserify lib/main-client.js -o dist/bundle.js"
+  },
+  "keywords": [
+    "ipsum"
+  ],
+  "author": "jwright",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.68",
+    "@types/node": "^8.0.12",
+    "browserify": "^14.4.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
+  }
+}
